@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Kayak Giens × Everywhere — Proposition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=IM+Fell+English:ital@0;1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--parch:#e9dcbf;--parch-d:#d9c7a0;--parch-dd:#c9b287;--encre:#3a2a17;--encre-l:#5c4527;
+  --mer:#1c6b83;--mer-d:#12495a;--mer-dd:#0c3540;--or:#c8992f;--or-l:#e6c366;--corsaire:#9b2c22;--corsaire-l:#c14535}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--encre);background:var(--parch-d);line-height:1.55;padding-bottom:82px}
+.pirata{font-family:'Pirata One',cursive}.fell{font-family:'IM Fell English',Georgia,serif}
+.wrap{max-width:480px;margin:0 auto;background:var(--parch);box-shadow:0 0 40px rgba(0,0,0,.15)}
+img{max-width:100%;display:block}
+
+.hero{background:linear-gradient(180deg,var(--mer-dd),var(--mer-d) 60%,var(--mer));color:#eaf4f5;padding:34px 24px 30px;text-align:center;position:relative;overflow:hidden}
+.hero .ev{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--or-l);margin-bottom:14px}
+.hero .mk{width:52px;height:52px;margin:0 auto 12px}
+.hero h1{font-family:'Pirata One',cursive;font-size:38px;line-height:1;letter-spacing:.5px}
+.hero h1 em{color:var(--or-l);font-style:normal}
+.hero p{margin-top:12px;font-family:'IM Fell English',serif;font-style:italic;font-size:16px;color:#d7e6e8}
+.badge{display:inline-block;border:1px solid rgba(230,195,102,.5);color:var(--or-l);font-size:12px;letter-spacing:.5px;padding:5px 14px;border-radius:999px;margin-top:15px}
+
+section{padding:24px}
+.k{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--corsaire);font-weight:600}
+h2{font-family:'Pirata One',cursive;font-size:29px;color:var(--encre);margin:3px 0 14px;line-height:1;letter-spacing:.5px}
+.card{background:rgba(255,255,255,.5);border:1px solid var(--parch-dd);border-radius:14px;padding:16px 18px;box-shadow:0 6px 18px rgba(58,42,23,.08);margin-bottom:12px}
+.li{display:flex;gap:12px;padding:8px 0;font-size:14.5px;align-items:flex-start}
+.li .i{flex-shrink:0;width:23px;height:23px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;margin-top:1px}
+.bad .i{background:var(--corsaire)}.good .i{background:var(--mer)}
+.li b{color:var(--encre)}
+
+.map-teaser{margin:4px 24px 0;background:linear-gradient(135deg,#e7d7b2,#dcc79c);border:8px solid transparent;
+  border-image:repeating-linear-gradient(45deg,#7a5a2c 0 8px,#9c7838 8px 16px) 8;border-radius:5px;padding:18px;text-align:center;
+  box-shadow:0 12px 30px rgba(58,42,23,.25)}
+.map-teaser .lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--corsaire);font-weight:600}
+.map-teaser .t{font-family:'Pirata One',cursive;font-size:26px;color:var(--mer-d);margin:2px 0 6px}
+.map-teaser p{font-size:13.5px;color:var(--encre-l);font-family:'IM Fell English',serif;font-style:italic}
+.circuits{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:12px}
+.circuits span{font-size:11.5px;letter-spacing:.3px;background:var(--parch);border:1px solid var(--parch-dd);border-radius:999px;padding:5px 11px}
+.circuits span i{font-style:normal;font-weight:700}
+
+.demo{background:var(--mer-dd);color:#eaf4f5;border-radius:16px;padding:24px;text-align:center;margin:4px 24px}
+.demo .k{color:var(--or-l)}
+.demo img{width:140px;height:140px;background:#fff;border-radius:12px;padding:8px;margin:10px auto}
+.demo b{font-family:'IM Fell English',serif;font-size:18px;display:block;margin-bottom:6px}
+.demo a{color:var(--or-l);font-size:13px;word-break:break-all;text-decoration:none}
+
+.why{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.why div{background:rgba(255,255,255,.5);border:1px solid var(--parch-dd);border-left:3px solid var(--or);border-radius:0 10px 10px 0;padding:11px;font-size:12.5px}
+.why b{font-family:'IM Fell English',serif;font-size:14px;color:var(--encre);display:block;margin-bottom:2px}
+
+.tarif{background:linear-gradient(135deg,var(--mer-d),var(--mer-dd));color:#eaf4f5;border-radius:14px;padding:22px;text-align:center}
+.tarif .k{color:var(--or-l)}
+.tarif b{font-family:'IM Fell English',serif;font-size:19px;display:block;margin:5px 0 6px}
+.tarif p{font-size:13px;color:#cfe0e3}
+
+.etude{display:block;margin:4px 24px 14px;text-decoration:none;background:linear-gradient(100deg,#22453a,#356453);border-radius:16px;padding:20px 22px;color:#fff}
+.etude .l{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:#c9c56a}
+.etude .h{font-family:'IM Fell English',serif;font-size:20px;margin:5px 0}
+.etude p{font-size:13.5px;color:#cfe0d1;line-height:1.5}
+.etude .go{margin-top:12px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:#c9c56a}
+
+.note{font-size:11.5px;color:#8a7454;font-style:italic;text-align:center;padding:0 24px}
+.bar{position:fixed;bottom:0;left:0;right:0;background:var(--mer-dd);box-shadow:0 -4px 20px rgba(0,0,0,.25);padding:11px 14px;display:flex;justify-content:center;z-index:50;border-top:2px solid var(--or)}
+.bar a{flex:1;max-width:320px;text-align:center;background:var(--corsaire);color:#fff;font-family:'Pirata One',cursive;letter-spacing:.6px;border-radius:999px;padding:13px;font-size:19px;text-decoration:none}
+.foot{text-align:center;font-size:11px;color:#8a7454;padding:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="ev">Everywhere × Kayak Giens Paddle</div>
+    <svg class="mk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#c8992f" stroke-width="2"/><path d="M20 7 L20 30 M13 12 Q20 6 27 12 M11 22 Q20 34 29 22" fill="none" stroke="#e6c366" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="2.4" fill="#e6c366"/></svg>
+    <h1>On met votre aventure <em>sur la carte</em>.</h1>
+    <p>Vos avis sont excellents, vos spots sont magnifiques — mais en ligne, on ne voit qu'une liste de matériel. Changeons ça.</p>
+    <span class="badge">⚓ Presqu'île de Giens · la Badine</span>
+  </div>
+
+  <section>
+    <div class="k">Le constat</div>
+    <h2>L'aventure ne se voit pas en ligne</h2>
+    <div class="card">
+      <div class="li bad"><span class="i">—</span><div><b>La carte de vos balades n'existe nulle part.</b> Les calanques, les grottes, le Grand Ribaud, Porquerolles — invisibles.</div></div>
+      <div class="li bad"><span class="i">—</span><div><b>L'ambiance pirate que vous aimez</b> ne vit pas sur le site : le ton est sobre, générique, comme celui des loueurs voisins.</div></div>
+      <div class="li bad"><span class="i">—</span><div>La réservation passe par <b>une plateforme (commission)</b>, et le site est sur un <b>sous-domaine gratuit</b>, pas à votre nom.</div></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="k">Ce qu'on propose</div>
+    <h2>Une carte au trésor, et le cap à vous</h2>
+    <div class="card">
+      <div class="li good"><span class="i">✓</span><div><b>La carte des balades en pièce maîtresse</b> — vos circuits nommés, chacun s'allume du départ au trésor.</div></div>
+      <div class="li good"><span class="i">✓</span><div><b>Réservation en direct</b>, sur votre site, <b>sans commission</b>.</div></div>
+      <div class="li good"><span class="i">✓</span><div>Un <b>site à votre nom</b> (domaine propre), tarifs clairs, l'esprit pirate assumé.</div></div>
+    </div>
+  </section>
+
+  <div class="map-teaser">
+    <div class="lbl">La pièce maîtresse</div>
+    <div class="t">La carte des balades</div>
+    <p>Quatre caps au départ de la Badine — le client choisit, la route s'allume.</p>
+    <div class="circuits">
+      <span><i style="color:#a67d1e">●</i> La Ronde du Ribaud</span>
+      <span><i style="color:#1c6b83">●</i> Le Secret des Grottes</span>
+      <span><i style="color:#9b2c22">●</i> Cap sur Porquerolles</span>
+      <span><i style="color:#4a7a43">●</i> Les Moussaillons</span>
+    </div>
+  </div>
+
+  <div class="demo">
+    <div class="k" style="font-size:12px;letter-spacing:1px">La maquette est prête</div>
+    <img src="../assets/qr.png" alt="QR démo">
+    <b>Scannez — voyez la carte s'animer</b>
+    <a href="https://flaverw.github.io/kayak-giens-apercu/">flaverw.github.io/kayak-giens-apercu</a>
+  </div>
+
+  <section>
+    <div class="k">Pourquoi nous</div>
+    <h2>Vous gardez la barre</h2>
+    <div class="why">
+      <div><b>À vous</b>Sur votre domaine.</div>
+      <div><b>Sans commission</b>100 % de vos sorties.</div>
+      <div><b>Sans engagement</b>Libre à tout moment.</div>
+      <div><b>En direct</b>La demande arrive à vous.</div>
+      <div><b>En Europe</b>Vos données à vous.</div>
+      <div><b>Autonome</b>Tarifs &amp; circuits modifiables.</div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="tarif">
+      <div class="k" style="font-size:12px;letter-spacing:1px">Le tarif</div>
+      <b>Transparent, de vive voix</b>
+      <p>Le site vous appartient, sans abonnement obligatoire ni engagement. Le détail, simplement, lors de l'échange.</p>
+    </div>
+  </section>
+
+  <a class="etude" href="../etude/?e=Kayak%20Giens%20Paddle">
+    <div class="l">En bonus · sous 48 h</div>
+    <div class="h">Votre étude d'économies</div>
+    <p>Au-delà du site : confiez-nous vos contrats (réservation, télécom, énergie, banque, TPE, assurance…). On regarde ce qu'on peut <b style="color:#fff">remplacer, améliorer ou renégocier</b>, et on vous remet une étude claire sous 48 h. Gratuit, sans engagement — estimation prudente, jamais une promesse.</p>
+    <div class="go">Recevoir mon étude →</div>
+  </a>
+
+  <p class="note">On constate, on ne promet rien : pas de promesse de réservations en plus. Juste l'aventure rendue visible, et la main qui vous revient.</p>
+  <div class="foot">Everywhere · Cabinet d'accompagnement numérique · contenu, visuels &amp; tarif à valider ensemble</div>
+</div>
+<div class="bar"><a href="https://flaverw.github.io/kayak-giens-apercu/" target="_blank" rel="noopener">Ouvrir la carte ⚓</a></div>
+</body>
+</html>
