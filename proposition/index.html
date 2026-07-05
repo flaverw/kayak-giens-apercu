@@ -54,10 +54,22 @@ h2{font-family:'Pirata One',cursive;font-size:29px;color:var(--encre);margin:3px
 .why div{background:rgba(255,255,255,.5);border:1px solid var(--parch-dd);border-left:3px solid var(--or);border-radius:0 10px 10px 0;padding:11px;font-size:12.5px}
 .why b{font-family:'IM Fell English',serif;font-size:14px;color:var(--encre);display:block;margin-bottom:2px}
 
-.tarif{background:linear-gradient(135deg,var(--mer-d),var(--mer-dd));color:#eaf4f5;border-radius:14px;padding:22px;text-align:center}
-.tarif .k{color:var(--or-l)}
-.tarif b{font-family:'IM Fell English',serif;font-size:19px;display:block;margin:5px 0 6px}
-.tarif p{font-size:13px;color:#cfe0e3}
+.of{background:rgba(255,255,255,.5);border:1px solid var(--parch-dd);border-radius:14px;padding:14px 17px;box-shadow:0 6px 18px rgba(58,42,23,.08);margin-bottom:10px}
+.of .tag{display:inline-block;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;color:var(--corsaire);border:1px solid var(--parch-dd);border-radius:999px;padding:2px 9px;margin-bottom:4px}
+.of .on{display:block;font-family:'Pirata One',cursive;font-size:23px;letter-spacing:.5px;color:var(--mer-d);line-height:1.1}
+.of .op{display:block;font-family:'IM Fell English',serif;font-size:15px;color:var(--corsaire);margin:2px 0 5px}
+.of .op i{font-style:italic;font-size:13px;color:var(--encre-l)}
+.of p{font-size:13px;color:var(--encre-l)}
+.of p b{color:var(--encre)}
+.of .oi{font-style:italic;font-size:12.5px;color:var(--mer-d);border-top:1px dashed var(--parch-dd);margin-top:8px;padding-top:7px}
+.of.first{background:linear-gradient(135deg,var(--mer-d),var(--mer-dd));border:1px solid var(--or);color:#eaf4f5}
+.of.first .tag{color:var(--or-l);border-color:rgba(230,195,102,.5)}
+.of.first .on{color:var(--or-l)}
+.of.first .op{color:#fff}
+.of.first .op i{color:#cfe0e3}
+.of.first p{color:#cfe0e3}
+.of.first p b{color:#fff}
+.of.first .oi{color:var(--or-l);border-top-color:rgba(230,195,102,.35)}
 
 .etude{display:block;margin:4px 24px 14px;text-decoration:none;background:linear-gradient(100deg,#22453a,#356453);border-radius:16px;padding:20px 22px;color:#fff}
 .etude .l{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:#c9c56a}
@@ -69,6 +81,7 @@ h2{font-family:'Pirata One',cursive;font-size:29px;color:var(--encre);margin:3px
 .bar{position:fixed;bottom:0;left:0;right:0;background:var(--mer-dd);box-shadow:0 -4px 20px rgba(0,0,0,.25);padding:11px 14px;display:flex;justify-content:center;z-index:50;border-top:2px solid var(--or)}
 .bar a{flex:1;max-width:320px;text-align:center;background:var(--corsaire);color:#fff;font-family:'Pirata One',cursive;letter-spacing:.6px;border-radius:999px;padding:13px;font-size:19px;text-decoration:none}
 .foot{text-align:center;font-size:11px;color:#8a7454;padding:18px}
+@media print{body{zoom:.86;padding-bottom:0}.bar{position:static;margin-top:10px}}
 </style>
 </head>
 <body>
@@ -134,10 +147,24 @@ h2{font-family:'Pirata One',cursive;font-size:29px;color:var(--encre);margin:3px
   </section>
 
   <section style="padding-top:0">
-    <div class="tarif">
-      <div class="k" style="font-size:12px;letter-spacing:1px">Le tarif</div>
-      <b>Transparent, de vive voix</b>
-      <p>Le site vous appartient, sans abonnement obligatoire ni engagement. Le détail, simplement, lors de l'échange.</p>
+    <div class="k">La gamme</div>
+    <h2>Trois formules, un seul cap</h2>
+    <div class="of first">
+      <span class="tag">Le point de départ</span>
+      <span class="on">Origine</span>
+      <span class="op">299 € <i>· puis 99 €/mois, sans engagement de durée</i></span>
+      <p>La création du site — celui de la maquette — et sa mise en ligne : <b>299 €</b>. Puis <b>99 €/mois</b> : hébergement, nom de domaine et le suivi léger — modifications simples (horaires, prix, photos), sauvegardes, petites corrections.</p>
+      <p class="oi">Compris au départ : les 5 guides pas-à-pas + l'étude d'économies sous 48 h.</p>
+    </div>
+    <div class="of">
+      <span class="on">Singulier</span>
+      <span class="op">+200 €/mois</span>
+      <p>Tout Origine, plus le <b>kit physique</b> façonné par notre atelier partenaire : <b>carte NFC</b> prototype personnalisée (on approche le téléphone, votre site s'ouvre), <b>textiles prototypes brodés</b> à votre nom — déclinés en plusieurs couleurs au fil de l'abonnement — et <b>chevalet QR</b> de comptoir. Les prototypes évoluent pendant l'abonnement.</p>
+    </div>
+    <div class="of">
+      <span class="on">Everywhere</span>
+      <span class="op">Sur mesure, de vive voix</span>
+      <p><b>L'équipe habillée</b> : textiles brodés pour chaque membre, tailles et couleurs au choix, réassort saisonnier. <b>La panoplie NFC complète</b> : cartes pour toute l'équipe, plaque de comptoir, chevalets de table, stickers vitrine, porte-clés — dont « votre avis en un tap ». <b>Le site premium</b> : animations signature de votre métier, modules avancés (réservation, commande, back-office selon le métier), séance photo, pages supplémentaires. <b>Le suivi renforcé</b> : statistiques mensuelles commentées, priorité de support, formation IA en visio chaque trimestre, étude d'économies renouvelée chaque année.</p>
     </div>
   </section>
 
