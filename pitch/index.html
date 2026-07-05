@@ -1,58 +1,76 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
+<!-- cadenas-everywhere -->
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Kayak Giens × Everywhere — Hub</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=IM+Fell+English&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Accès protégé — Everywhere</title>
 <style>
-:root{--or:#c8992f;--or-l:#e6c366;--corsaire:#9b2c22;--mer-dd:#0c3540}
+:root{--noir:#14110f;--or:#c9a24b;--creme:#f3ecdd}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Jost',sans-serif;min-height:100vh;background:radial-gradient(120% 90% at 50% 0%,#12495a,#0c3540 70%);color:#eaf4f5;display:flex;align-items:center;justify-content:center;padding:24px}
-.hub{width:100%;max-width:420px;text-align:center}
-.ev{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--or-l);margin-bottom:16px}
-.mk{width:56px;height:56px;margin:0 auto 12px}
-h1{font-family:'Pirata One',cursive;font-size:34px;letter-spacing:.5px;line-height:1}
-.tag{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#9fbcc2;margin:4px 0 24px}
-a.b{display:flex;align-items:center;gap:14px;text-align:left;background:rgba(255,255,255,.06);border:1px solid rgba(230,195,102,.25);border-radius:16px;padding:16px 18px;margin-bottom:12px;color:#fff;text-decoration:none;transition:.15s}
-a.b:active{transform:scale(.98)}
-a.b .ic{font-size:22px;width:28px;text-align:center}
-a.b .t{flex:1}
-a.b .t .h{font-family:'IM Fell English',serif;font-size:17px;display:block;line-height:1.15}
-a.b .t .s{font-size:12px;color:#9fbcc2;display:block;margin-top:2px}
-a.b .ar{font-size:20px;color:var(--or-l)}
-a.b.prim{background:var(--corsaire);border-color:#c14535}
-a.b.prim .t .s{color:#f0cfcb}a.b.prim .ar{color:#fff}
-a.etude{display:flex;align-items:center;gap:14px;text-align:left;text-decoration:none;color:#fff;margin-top:6px;background:linear-gradient(100deg,#22453a,#356453);border:1px solid #4d7a67;border-radius:16px;padding:16px 18px}
-a.etude .ic{font-size:24px;width:28px;text-align:center}
-a.etude .t{flex:1}
-a.etude .t .l{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:#c9c56a;display:block}
-a.etude .t .h{font-family:'IM Fell English',serif;font-size:17px;display:block;margin-top:2px}
-a.etude .t .s{font-size:12px;color:#cfe0d1;display:block;margin-top:2px}
-a.etude .ar{font-size:20px;color:#c9c56a}
-.foot{margin-top:18px;font-size:11px;color:#9fbcc2}
-</style>
-</head>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh;
+ background:radial-gradient(120% 120% at 50% 0%,#241f1a,var(--noir));color:var(--creme);
+ display:flex;align-items:center;justify-content:center;padding:24px}
+.card{max-width:420px;width:100%;text-align:center}
+.mark{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--or);margin-bottom:18px}
+.lock{font-size:40px;margin-bottom:14px}
+h1{font-size:22px;font-weight:600;line-height:1.25;margin-bottom:8px}
+p.sub{font-size:14px;color:#b9b0a0;margin-bottom:22px;line-height:1.5}
+form{display:flex;gap:8px;flex-direction:column}
+input{width:100%;background:#1c1814;border:1px solid rgba(201,162,75,.4);color:var(--creme);
+ padding:14px 16px;font-size:16px;border-radius:8px;text-align:center;letter-spacing:.05em}
+input:focus{outline:none;border-color:var(--or)}
+button{background:var(--or);color:var(--noir);border:none;padding:14px;font-size:15px;font-weight:600;
+ border-radius:8px;cursor:pointer;letter-spacing:.03em}
+button:hover{filter:brightness(1.08)}
+.err{color:#e6857a;font-size:13px;min-height:18px;margin-top:4px}
+.foot{margin-top:26px;font-size:11px;color:#7c7364;line-height:1.5}
+</style></head>
 <body>
-<div class="hub">
-  <div class="ev">Everywhere · Hub commercial</div>
-  <svg class="mk" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="#c8992f" stroke-width="2"/><path d="M20 7 L20 30 M13 12 Q20 6 27 12 M11 22 Q20 34 29 22" fill="none" stroke="#e6c366" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="2.4" fill="#e6c366"/></svg>
-  <h1>Kayak Giens Paddle</h1>
-  <div class="tag">Tout pour l'échange, en un écran</div>
-
-  <a class="b prim" href="../" target="_blank" rel="noopener">
-    <span class="ic">🗺️</span><span class="t"><span class="h">Voir la maquette</span><span class="s">La carte au trésor animée — circuits, tarifs, résa</span></span><span class="ar">→</span>
-  </a>
-  <a class="b" href="../proposition/">
-    <span class="ic">📄</span><span class="t"><span class="h">La proposition</span><span class="s">Version mobile à montrer / envoyer</span></span><span class="ar">→</span>
-  </a>
-  <a class="etude" href="../etude/?e=Kayak%20Giens%20Paddle">
-    <span class="ic">🧮</span><span class="t"><span class="l">En bonus · sous 48 h</span><span class="h">L'étude d'économies</span><span class="s">Ses contrats passés au crible — remplacer, améliorer, renégocier</span></span><span class="ar">→</span>
-  </a>
-  <div class="foot">Prix = arbitrage Everywhere · l'humain signe</div>
+<div class="card">
+  <div class="mark">Everywhere</div>
+  <div class="lock">&#128274;</div>
+  <h1>Accès protégé</h1>
+  <p class="sub">Cette démonstration est réservée. Saisissez votre code d'accès pour la consulter.</p>
+  <form id="f"><input id="pw" type="password" placeholder="Code d'accès" autocomplete="off" autofocus>
+  <button type="submit">Entrer</button></form>
+  <div class="err" id="e"></div>
+  <div class="foot">Everywhere — cabinet d'accompagnement numérique.<br>Contenu chiffré. Un code par visiteur, communiqué par Everywhere.</div>
 </div>
-</body>
-</html>
+<script>
+(function(){
+ var D={"v":1,"iters":210000,"iv":"0xF+r8b6XV4snuM4","ct":"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","wraps":[{"role":"client","salt":"KSEEuctSWDyLSaElHHWG/Q==","iv":"F21FP6N7FBbi8m5E","wrapped":"nP1LtXCNIzPe1xI14kFBZPJOwnu5JGL9A2B1/7K2+u1UVZKPp678bzpPTtNN7/UR"}]};
+ var dec=function(s){var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u;};
+ var enc=new TextEncoder();
+ async function derive(pw,salt){
+  var km=await crypto.subtle.importKey('raw',enc.encode(pw),'PBKDF2',false,['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:D.iters,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+ }
+ async function tryUnlock(pw){
+  for(var i=0;i<D.wraps.length;i++){
+   var w=D.wraps[i];
+   try{
+    var wk=await derive(pw,dec(w.salt));
+    var ckRaw=new Uint8Array(await crypto.subtle.decrypt({name:'AES-GCM',iv:dec(w.iv)},wk,dec(w.wrapped)));
+    var ck=await crypto.subtle.importKey('raw',ckRaw,'AES-GCM',false,['decrypt']);
+    var html=new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:dec(D.iv)},ck,dec(D.ct)));
+    return {ok:true,role:w.role,html:html};
+   }catch(e){}
+  }
+  return {ok:false};
+ }
+ function render(html){document.open();document.write(html);document.close();}
+ async function boot(){
+  var pw=null;try{pw=sessionStorage.getItem('ew_pass');}catch(e){}
+  if(pw){var r=await tryUnlock(pw);if(r.ok){render(r.html);return;}}
+  document.getElementById('f').addEventListener('submit',async function(ev){
+   ev.preventDefault();
+   var v=document.getElementById('pw').value;
+   document.getElementById('e').textContent='';
+   var r=await tryUnlock(v);
+   if(r.ok){try{sessionStorage.setItem('ew_pass',v);}catch(e){}render(r.html);}
+   else{document.getElementById('e').textContent='Code incorrect.';document.getElementById('pw').select();}
+  });
+ }
+ if(!crypto||!crypto.subtle){document.getElementById('e').textContent='Navigateur non compatible.';}else{boot();}
+})();
+</script>
+</body></html>
