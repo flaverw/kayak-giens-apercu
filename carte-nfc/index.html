@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kayak Giens — carte NFC</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=IM+Fell+English&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--parch:#e9dcbf;--mer-d:#12495a;--mer-dd:#0c3540;--or:#c8992f;--or-l:#e6c366;--corsaire:#9b2c22}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#5a5148;font-family:'Jost',sans-serif;display:flex;flex-wrap:wrap;gap:26px;justify-content:center;align-items:center;min-height:100vh;padding:34px}
+/* 85.6 x 54 mm ~ carte de visite, 3.375in x 2.125in @ ~96dpi -> 324x204 px, on scale x2 pour netteté */
+.card{width:648px;height:408px;border-radius:26px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.45);color:#eaf4f5}
+/* RECTO */
+.recto{background:radial-gradient(120% 120% at 20% 0%,#12495a,#0c3540 70%)}
+.recto::after{content:"";position:absolute;inset:0;opacity:.5;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='120' height='120' filter='url(%23n)' opacity='0.5'/></svg>")}
+.recto .inner{position:relative;z-index:2;height:100%;padding:44px 48px;display:flex;flex-direction:column;justify-content:space-between}
+.recto .top{display:flex;align-items:center;gap:16px}
+.recto .mk{width:66px;height:66px;flex:none}
+.recto h1{font-family:'Pirata One',cursive;font-size:46px;line-height:.9;letter-spacing:.5px}
+.recto h1 span{display:block;font-size:20px;color:var(--or-l);letter-spacing:4px}
+.recto .slo{font-family:'IM Fell English',serif;font-style:italic;font-size:22px;color:#cfe0e3}
+.recto .foot{display:flex;justify-content:space-between;align-items:flex-end}
+.recto .foot .l{font-size:16px;letter-spacing:.5px}
+.recto .foot .l b{color:var(--or-l);font-weight:500}
+.recto .tap{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--or-l);border:1px solid rgba(230,195,102,.5);border-radius:999px;padding:7px 16px}
+/* VERSO */
+.verso{background:linear-gradient(135deg,#e7d7b2,#dcc79c);color:#3a2a17}
+.verso .inner{height:100%;padding:38px 44px;display:flex;align-items:center;gap:34px}
+.verso .qr{width:210px;height:210px;background:#fff;border-radius:16px;padding:12px;flex:none;box-shadow:0 10px 24px rgba(58,42,23,.25)}
+.verso .qr img{width:100%;height:100%;display:block}
+.verso .rt h2{font-family:'Pirata One',cursive;font-size:34px;color:var(--mer-d);line-height:1}
+.verso .rt p{font-family:'IM Fell English',serif;font-style:italic;font-size:18px;color:#5c4527;margin:8px 0 14px}
+.verso .rt .row{font-size:16px;margin:4px 0;display:flex;gap:9px;align-items:center}
+.verso .rt .row b{color:var(--corsaire)}
+.tagp{position:fixed;bottom:10px;left:0;right:0;text-align:center;color:#d8cdba;font-size:12px}
+@media print{body{background:#fff;gap:12mm}.tagp{display:none}.card{box-shadow:none}}
+</style>
+</head>
+<body>
+  <!-- RECTO -->
+  <div class="card recto">
+    <div class="inner">
+      <div class="top">
+        <svg class="mk" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="#c8992f" stroke-width="2"/><path d="M20 7 L20 30 M13 12 Q20 6 27 12 M11 22 Q20 34 29 22" fill="none" stroke="#e6c366" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="2.4" fill="#e6c366"/></svg>
+        <h1>Kayak Giens<span>PADDLE</span></h1>
+      </div>
+      <div class="slo">« On vous ouvre la carte —<br>vous n'avez qu'à pagayer. »</div>
+      <div class="foot">
+        <div class="l">📍 Plage de la Badine · Giens<br><b>06 82 66 03 39</b> · 7j/7</div>
+        <div class="tap">◗ Approchez</div>
+      </div>
+    </div>
+  </div>
+  <!-- VERSO -->
+  <div class="card verso">
+    <div class="inner">
+      <div class="qr"><img src="../assets/qr.png" alt="QR"></div>
+      <div class="rt">
+        <h2>La carte<br>au trésor</h2>
+        <p>Scannez — les circuits s'allument.</p>
+        <div class="row">🗺️ <span>Les balades &amp; les tarifs</span></div>
+        <div class="row">⚓ <span>Réserver <b>en direct</b></span></div>
+        <div class="row">🐙 <span>Kayak · paddle · paddle géant</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="tagp">Carte NFC / QR — recto-verso · 85,6 × 54 mm · QR à régénérer vers le vrai domaine après signature</div>
+</body>
+</html>
