@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=IM+Fell+English:ital@0;1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg%3E%3Cg transform='rotate(42 24 24)'%3E%3Crect x='22.8' y='4' width='2.4' height='40' rx='1.2' fill='%23c8992f'/%3E%3Cellipse cx='24' cy='5' rx='3.6' ry='5.4' fill='%23e6c366'/%3E%3Cellipse cx='24' cy='43' rx='3.6' ry='5.4' fill='%23e6c366'/%3E%3C/g%3E%3Cg transform='rotate(-42 24 24)'%3E%3Crect x='22.8' y='4' width='2.4' height='40' rx='1.2' fill='%23c8992f'/%3E%3Cellipse cx='24' cy='5' rx='3.6' ry='5.4' fill='%23e6c366'/%3E%3Cellipse cx='24' cy='43' rx='3.6' ry='5.4' fill='%23e6c366'/%3E%3C/g%3E%3C/g%3E%3Cpath d='M24 15.5C31 15.5 35 20.5 35 26.2 35 29.8 33.2 31.6 31.2 32.6L31.2 35.4C31.2 37.4 28.3 38.4 24 38.4 19.7 38.4 16.8 37.4 16.8 35.4L16.8 32.6C14.8 31.6 13 29.8 13 26.2 13 20.5 17 15.5 24 15.5Z' fill='%23f4ecd6' stroke='%232e2013'/%3E%3Cellipse cx='19.8' cy='26.4' rx='3.1' ry='3.5' fill='%232e2013'/%3E%3Cellipse cx='28.2' cy='26.4' rx='3.1' ry='3.5' fill='%232e2013'/%3E%3Cpath d='M24 28.6l-1.7 3.2h3.4z' fill='%232e2013'/%3E%3Cpath d='M12.4 24.5C14.5 18.6 19.2 15.3 24 15.3 28.8 15.3 33.5 18.6 35.6 24.5 33 21.2 29.5 19.8 24 19.8 18.5 19.8 15 21.2 12.4 24.5Z' fill='%239b2c22'/%3E%3C/svg%3E">
 <style>
 :root{
   --map-bg:#ecddb8;--map-land:#cbb07c;--map-shade:#a98a54;--map-coast:#2e2013;--map-ink:#2e2013;--map-inksoft:#5c4527;--map-salins:#6e7f45;--map-halo:#f0e4c8;--map-gold:#c8992f;--map-gold-l:#e6c366;--map-red:#9b2c22;
@@ -54,8 +55,9 @@ body::after{
 @media(min-width:820px){.top nav .lnk{display:inline}}
 
 /* ---------- hero ---------- */
-.hero{position:relative;color:var(--ecume);text-align:center;padding:70px 22px 90px;overflow:hidden;
-  background:linear-gradient(180deg,var(--mer-dd),var(--mer-d) 55%,var(--mer))}
+.hero{position:relative;color:var(--ecume);text-align:center;padding:70px 22px 90px;overflow:hidden;background-color:var(--mer-d);
+  background-image:linear-gradient(180deg,rgba(12,53,64,.80),rgba(18,73,90,.72) 52%,rgba(28,107,131,.82)),url("img/real-terrasse.jpg");
+  background-size:cover;background-position:center 42%}
 .hero .waves{position:absolute;left:0;right:0;bottom:-2px;height:90px;opacity:.5}
 .hero .gulls{position:absolute;top:38px;left:0;right:0;text-align:center;color:#cfe0e3;font-size:20px;letter-spacing:14px;opacity:.55}
 .hero .kicker{display:inline-block;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--or-l);
@@ -191,30 +193,78 @@ svg.dimmed .route.active .ln{stroke-width:6}
 .foot{background:#0a2b34;color:#9fbcc2;text-align:center;padding:34px 22px;font-size:12.5px}
 .foot .ev{color:var(--or-l);font-family:'IM Fell English',serif;font-style:italic;font-size:14px;margin-bottom:6px}
 
+/* ---------- emblème pirate ---------- */
+.top .brand .mk{width:38px;height:38px}
+.hero-mk{width:96px;height:96px;margin:0 auto 6px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4));position:relative;z-index:2}
+.foot-mk{width:56px;height:56px;margin:0 auto 10px;opacity:.95}
+
+/* ---------- carte (image peinte) ---------- */
+.map-frame img{display:block;width:100%;height:auto}
+.map-cap{text-align:center;margin-top:16px;font-family:'IM Fell English',serif;font-style:italic;font-size:14.5px;color:var(--encre-l)}
+.map-read{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:center;margin-top:20px}
+.map-read .it{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--encre)}
+.map-read .mk-d{width:26px;height:16px;border-radius:999px;flex:none;background:radial-gradient(120% 120% at 40% 30%,#ffe27a,#c8992f);border:1.5px solid #7a4a22;box-shadow:0 2px 5px rgba(0,0,0,.18)}
+.map-read .mk-x{width:16px;height:16px;border-radius:50%;flex:none;background:#ff7a18;box-shadow:0 0 0 3px rgba(255,122,24,.25)}
+.map-read .mk-p{color:#c69a30;font-size:16px;width:20px;text-align:center;flex:none}
+
+/* ---------- galerie photos ---------- */
+#gal{background:linear-gradient(180deg,var(--parch),var(--parch-d))}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:250px;gap:12px;margin-top:36px}
+.gal figure{margin:0;position:relative;overflow:hidden;border-radius:12px;border:3px solid #efe2c2;
+  box-shadow:0 10px 26px rgba(58,42,23,.22);background:#0c3540}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.gal figure:hover img{transform:scale(1.06)}
+.gal .pos-top img{object-position:center 18%}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 13px 10px;color:#fff;font-size:13px;letter-spacing:.4px;
+  background:linear-gradient(180deg,transparent,rgba(8,30,36,.85));font-family:'IM Fell English',serif;font-style:italic}
+.gal-note{text-align:center;margin-top:18px;font-size:12.5px;color:#8a7454;font-style:italic}
+.gal-note b{color:var(--corsaire);font-style:normal}
+@media(max-width:640px){
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+}
+
 /* mobile */
 @media(max-width:640px){
   .top nav a:not(.cta){display:none}
   section{padding:52px 18px}
   .resa .grid{grid-template-columns:1fr}
   .hero{padding:56px 18px 74px}
+  .hero-mk{width:74px;height:74px}
 }
 </style>
 </head>
 <body>
 
+<!-- ============ EMBLÈME PIRATE (tête de mort + pagaies croisées) — la marque de fabrique ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="jolly" viewBox="0 0 48 48">
+  <g>
+    <g transform="rotate(42 24 24)"><rect x="22.8" y="4" width="2.4" height="40" rx="1.2" fill="#c8992f"/><ellipse cx="24" cy="5" rx="3.6" ry="5.4" fill="#e6c366" stroke="#a67d1e" stroke-width="1"/><ellipse cx="24" cy="43" rx="3.6" ry="5.4" fill="#e6c366" stroke="#a67d1e" stroke-width="1"/></g>
+    <g transform="rotate(-42 24 24)"><rect x="22.8" y="4" width="2.4" height="40" rx="1.2" fill="#c8992f"/><ellipse cx="24" cy="5" rx="3.6" ry="5.4" fill="#e6c366" stroke="#a67d1e" stroke-width="1"/><ellipse cx="24" cy="43" rx="3.6" ry="5.4" fill="#e6c366" stroke="#a67d1e" stroke-width="1"/></g>
+  </g>
+  <path d="M24 15.5 C31 15.5 35 20.5 35 26.2 C35 29.8 33.2 31.6 31.2 32.6 L31.2 35.4 C31.2 37.4 28.3 38.4 24 38.4 C19.7 38.4 16.8 37.4 16.8 35.4 L16.8 32.6 C14.8 31.6 13 29.8 13 26.2 C13 20.5 17 15.5 24 15.5 Z" fill="#f4ecd6" stroke="#2e2013" stroke-width="1.1"/>
+  <ellipse cx="19.8" cy="26.4" rx="3.1" ry="3.5" fill="#2e2013"/><ellipse cx="28.2" cy="26.4" rx="3.1" ry="3.5" fill="#2e2013"/>
+  <circle cx="20.9" cy="25.5" r="0.9" fill="#f4ecd6" opacity="0.9"/><circle cx="29.3" cy="25.5" r="0.9" fill="#f4ecd6" opacity="0.9"/>
+  <path d="M24 28.6 l-1.7 3.2 h3.4 z" fill="#2e2013"/>
+  <g stroke="#2e2013" stroke-width="0.9"><line x1="21.2" y1="35.2" x2="21.2" y2="38"/><line x1="24" y1="35.6" x2="24" y2="38.4"/><line x1="26.8" y1="35.2" x2="26.8" y2="38"/></g>
+  <path d="M12.4 24.5 C14.5 18.6 19.2 15.3 24 15.3 C28.8 15.3 33.5 18.6 35.6 24.5 C33 21.2 29.5 19.8 24 19.8 C18.5 19.8 15 21.2 12.4 24.5 Z" fill="#9b2c22" stroke="#6f1c15" stroke-width="0.7"/>
+  <g fill="#f4ecd6"><circle cx="18" cy="21.3" r="0.9"/><circle cx="24" cy="20.2" r="0.9"/><circle cx="30" cy="21.3" r="0.9"/></g>
+  <path d="M12.6 23.8 C10.3 22.6 8.4 23.2 7.4 25 C9.2 24.4 10.7 24.9 12 26 Z" fill="#9b2c22" stroke="#6f1c15" stroke-width="0.6"/>
+  <path d="M7.6 24.8 C5.4 25.6 3.9 27.2 3.2 29.2 C5.4 28.2 7 28.2 8.6 29 C7.7 27.4 7.5 26.2 7.6 24.8 Z" fill="#b93529" stroke="#6f1c15" stroke-width="0.5"/>
+  <circle cx="10.4" cy="24.9" r="1.7" fill="#9b2c22" stroke="#6f1c15" stroke-width="0.6"/>
+</symbol>
+</defs></svg>
+
 <!-- ============ TOP ============ -->
 <header class="top">
   <div class="brand">
-    <svg class="mk" viewBox="0 0 40 40" aria-hidden="true">
-      <circle cx="20" cy="20" r="18" fill="none" stroke="#c8992f" stroke-width="2"/>
-      <path d="M20 7 L20 30 M13 12 Q20 6 27 12 M11 22 Q20 34 29 22" fill="none" stroke="#e6c366" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="20" cy="20" r="2.4" fill="#e6c366"/>
-    </svg>
+    <svg class="mk" viewBox="0 0 48 48" aria-label="Kayak Giens Paddle"><use href="#jolly"/></svg>
     <div><b>Kayak Giens</b><span>Paddle · Presqu'île</span></div>
   </div>
   <nav>
     <a class="lnk" href="#carte">La carte</a>
     <a class="lnk" href="#parcours">Les parcours</a>
+    <a class="lnk" href="#gal">En images</a>
     <a class="lnk" href="#flotte">Tarifs</a>
     <a class="cta" href="tel:+33682660339">📞 Appeler</a>
   </nav>
@@ -223,9 +273,10 @@ svg.dimmed .route.active .ln{stroke-width:6}
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="gulls">︿﹀ ︿ ﹀︿</div>
+  <svg class="hero-mk" viewBox="0 0 48 48" aria-hidden="true"><use href="#jolly"/></svg>
   <span class="kicker">Presqu'île de Giens · Hyères</span>
   <h1>À l'abordage de<br>la <span class="or">presqu'île</span>.</h1>
-  <p class="sub">Kayak, paddle et paddle géant au départ de la plage de la Badine. On vous ouvre la carte — les calanques, les grottes, l'île du Grand Ribaud, l'eau turquoise. Vous n'avez qu'à pagayer.</p>
+  <p class="sub">Kayak, paddle et paddle géant au départ de <b>la Madrague</b>. On vous ouvre la carte — les calanques, les grottes, l'île du Grand Ribaud, l'eau turquoise. Vous n'avez qu'à pagayer.</p>
   <div class="btns">
     <a class="btn btn-or" href="#carte">🗺️ Ouvrir la carte au trésor</a>
     <a class="btn btn-ghost" href="tel:+33682660339">📞 Nous appeler</a>
@@ -238,7 +289,7 @@ svg.dimmed .route.active .ln{stroke-width:6}
 
 <div class="facts">
   <span>🧭 <b>7j/7</b> · mai → septembre</span>
-  <span>📍 Plage de <b>la Badine</b></span>
+  <span>📍 Base de <b>la Madrague</b></span>
   <span>🗣️ Accueil <b>FR / EN</b></span>
   <span>⚓ Matériel <b>vérifié</b> chaque matin</span>
 </div>
@@ -248,258 +299,19 @@ svg.dimmed .route.active .ln{stroke-width:6}
   <div class="wrap">
     <div class="eyebrow">Le grand jeu · la pièce maîtresse</div>
     <h1 class="h2">La carte des balades</h1>
-    <p class="lead">Chaque sortie est un cap. Choisissez votre circuit ci-dessous : la route s'allume sur la carte, du départ jusqu'au trésor.</p>
+    <p class="lead">Chaque sortie est un cap. La voici dessinée : les spots, les grottes, les îles — et le temps de pagaie pour y aller, au départ de la Madrague.</p>
     <div class="rule"></div>
 
     <div class="map-shell">
       <div class="map-frame">
-        <!-- ====== SVG TREASURE MAP ====== -->
-        <svg id="tmap" viewBox="0 0 1000 720" role="img" aria-label="Carte des circuits kayak autour de la presqu'ile de Giens">
-<defs>
-  <radialGradient id="vig" cx="50%" cy="47%" r="68%">
-    <stop offset="72%" stop-color="#6b4a22" stop-opacity="0"/>
-    <stop offset="100%" stop-color="#3a2810" stop-opacity=".34"/>
-  </radialGradient>
-  <linearGradient id="goldg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6c366"/><stop offset="1" stop-color="#c8992f"/></linearGradient>
-  <linearGradient id="sailg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3ead0"/><stop offset="1" stop-color="#d9c69a"/></linearGradient>
-  <filter id="roughen"><feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="5" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter>
-  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0.42 0 0 0 0 0.32 0 0 0 0 0.18 0 0 0 0.09 0"/></filter>
-  <filter id="soft"><feGaussianBlur stdDeviation="6"/></filter>
-  <marker id="arw" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker>
-  <!-- icones (groupes, pas de symbol+viewBox -> pas de mise a l'echelle parasite) -->
-  <g id="ic-village"><g stroke="var(--map-ink)" stroke-width="1.2" fill="var(--map-land)"><path d="M-8 4 v-6 l4 -3 l4 3 v6 z"/><path d="M0 4 v-8 l4 -3 l4 3 v8 z"/><path d="M-8 -2 l4 -3 l4 3 M0 -4 l4 -3 l4 3" fill="none"/></g></g>
-  <g id="ic-palm"><g stroke="var(--map-ink)" stroke-width="1.1" fill="none" stroke-linecap="round"><path d="M0 8 q-1 -8 -1 -12"/><path d="M-1 -4 q-6 -4 -9 -2 M-1 -4 q6 -4 9 -2 M-1 -5 q-3 -7 -1 -8 M-1 -5 q4 -6 6 -5" fill="var(--map-shade)"/></g></g>
-  <g id="ic-cave"><g stroke="var(--map-ink)" stroke-width="1.2"><path d="M-9 6 q1 -9 9 -10 q8 1 9 10 z" fill="var(--map-shade)"/><path d="M-3 6 q0 -6 3 -6 q3 0 3 6 z" fill="var(--map-ink)"/></g></g>
-  <g id="ic-rock"><g stroke="var(--map-ink)" stroke-width="1.1" fill="var(--map-shade)"><path d="M-9 6 l4 -9 l4 6 l3 -5 l4 8 z"/></g></g>
-  <g id="ic-dot"><circle r="2.6" fill="var(--map-ink)"/></g>
-  <g id="ic-cap"><path d="M0 -6 L4 5 L-4 5 Z" fill="var(--map-shade)" stroke="var(--map-ink)" stroke-width="1"/></g>
-</defs>
-
-<!-- ============ FOND ============ -->
-<rect x="0" y="0" width="1000" height="720" fill="var(--map-bg)"/>
-
-<!-- rhumbs (decor) -->
-<g class="map-decor" stroke="var(--map-inksoft)" stroke-width="0.6" opacity="0.16">
-  <line x1="830" y1="150" x2="1610" y2="150"/><line x1="830" y1="150" x2="1551" y2="449"/><line x1="830" y1="150" x2="1381" y2="701"/><line x1="830" y1="150" x2="1129" y2="871"/>
-  <line x1="830" y1="150" x2="830" y2="930"/><line x1="830" y1="150" x2="531" y2="871"/><line x1="830" y1="150" x2="279" y2="701"/><line x1="830" y1="150" x2="109" y2="449"/>
-  <line x1="830" y1="150" x2="50" y2="150"/><line x1="830" y1="150" x2="109" y2="-149"/><line x1="830" y1="150" x2="279" y2="-401"/><line x1="830" y1="150" x2="531" y2="-571"/>
-  <line x1="830" y1="150" x2="830" y2="-630"/><line x1="830" y1="150" x2="1129" y2="-571"/><line x1="830" y1="150" x2="1381" y2="-401"/><line x1="830" y1="150" x2="1551" y2="-149"/>
-</g>
-<!-- latitudes/longitudes tres legeres (decor) -->
-<g class="map-decor" stroke="var(--map-inksoft)" stroke-width="0.5" opacity="0.12">
-  <line x1="0" y1="250" x2="1000" y2="250"/><line x1="0" y1="500" x2="1000" y2="500"/><line x1="330" y1="0" x2="330" y2="720"/><line x1="670" y1="0" x2="670" y2="720"/>
-</g>
-
-<!-- ============ TERRES ============ -->
-<g>
-  <!-- continent Hyeres -->
-  <path d="M0,0 H1000 V60 C920,82 840,66 764,80 C700,92 636,72 576,84 C520,96 486,80 470,88 C430,102 372,86 320,92 C232,102 118,84 0,96 Z" fill="var(--map-land)" stroke="var(--map-coast)" stroke-width="2.4"/>
-  <!-- tombolo ouest -->
-  <path d="M412,90 C409,150 416,224 421,292 C423,314 431,326 425,333 L449,333 C453,300 446,240 444,182 C442,140 443,114 445,90 Z" fill="var(--map-land)" stroke="var(--map-coast)" stroke-width="2.2"/>
-  <!-- tombolo est -->
-  <path d="M543,88 C546,140 556,200 561,250 C564,292 576,320 567,333 L592,333 C598,300 589,250 586,200 C583,150 581,118 584,88 Z" fill="var(--map-land)" stroke="var(--map-coast)" stroke-width="2.2"/>
-  <!-- presqu'ile de Giens -->
-  <path id="giens" d="M425,333
-    C395,339 353,345 332,357 C318,367 314,385 315,401 C316,429 302,441 300,457
-    C298,479 299,495 300,511 C316,521 342,527 356,541 C366,557 350,558 336,563
-    C356,567 360,575 366,583 C378,593 392,597 402,603
-    C452,585 500,472 540,433 C560,413 520,409 512,401
-    C540,373 556,357 568,347 C566,341 561,337 561,333 Z"
-    fill="var(--map-land)" stroke="var(--map-coast)" stroke-width="2.6"/>
-  <!-- Petit Ribaud -->
-  <ellipse cx="540" cy="548" rx="11" ry="7" fill="var(--map-land)" stroke="var(--map-coast)" stroke-width="1.8"/>
-  <!-- Grand Ribaud -->
-  <ellipse cx="588" cy="578" rx="33" ry="14" transform="rotate(-24 588 578)" fill="var(--map-land)" stroke="var(--map-coast)" stroke-width="2"/>
-  <!-- Porquerolles -->
-  <path d="M566,648 C582,624 642,619 702,623 C772,627 842,626 878,647 C892,659 884,690 852,700 C778,714 690,712 640,706 C596,700 556,674 566,648 Z" fill="var(--map-land)" stroke="var(--map-coast)" stroke-width="2.6"/>
-</g>
-
-<!-- flancs ombres (relief) -->
-<g opacity="0.9">
-  <path d="M300,511 C316,521 342,527 356,541 C366,557 350,558 336,563 C356,567 360,575 366,583 C378,593 392,597 402,603 C452,585 500,472 540,433 C520,470 470,560 402,588 C360,600 330,560 316,536 C306,520 300,516 300,511 Z" fill="var(--map-shade)" opacity="0.5"/>
-  <path d="M640,706 C596,700 556,674 566,648 C600,672 700,688 852,700 C778,714 690,712 640,706 Z" fill="var(--map-shade)" opacity="0.55"/>
-</g>
-
-<!-- hachures de rivage (cote sud + iles) -->
-<g stroke="var(--map-inksoft)" stroke-width="0.8" opacity="0.5">
-  <path d="M304,516 l-7 4 M320,536 l-7 4 M340,552 l-5 6 M366,585 l-4 6 M392,600 l-2 7 M470,540 l5 5 M510,486 l5 5 M545,446 l5 4" fill="none"/>
-  <path d="M636,700 l0 7 M700,706 l0 7 M770,706 l0 7 M840,700 l2 6" fill="none"/>
-</g>
-
-<!-- ============ SALINS ============ -->
-<path d="M462,222 C500,218 528,232 530,268 C532,304 508,320 470,318 C440,316 436,286 440,258 C443,234 448,224 462,222 Z" fill="var(--map-salins)" stroke="var(--map-coast)" stroke-width="1.3" stroke-dasharray="4 3" opacity="0.9"/>
-<g class="map-decor" stroke="var(--map-inksoft)" stroke-width="1" fill="none" opacity="0.7"><path d="M470,250 l3 3 l3 -3 M486,272 l3 3 l3 -3 M462,292 l3 3 l3 -3 M500,296 l3 3 l3 -3"/></g>
-<text x="484" y="272" text-anchor="middle" class="map-amb" font-size="11.5" transform="rotate(-86 484 272)">Salins des Pesquiers</text>
-
-<!-- ============ ROUTES ============ -->
-<g id="routes" fill="none" stroke-linecap="round">
-  <g class="route active" data-c="flamants">
-    <path class="halo" d="M566,258 C588,240 600,210 578,190 C562,175 550,162 542,150" stroke="var(--map-halo)" stroke-width="7"/>
-    <path class="ln" d="M566,258 C588,240 600,210 578,190 C562,175 550,162 542,150" stroke="#c64b7a" stroke-width="3.2" stroke-dasharray="1.5 8" marker-end="url(#arw)"/>
-  </g>
-  <g class="route active" data-c="contrebandiers">
-    <path class="halo" d="M568,262 C598,300 601,330 589,349 C572,373 556,392 548,410 C548,420 546,427 545,433" stroke="var(--map-halo)" stroke-width="7"/>
-    <path class="ln" d="M568,262 C598,300 601,330 589,349 C572,373 556,392 548,410 C548,420 546,427 545,433" stroke="#1f7a8c" stroke-width="3.2" stroke-dasharray="1.5 8" marker-end="url(#arw)"/>
-  </g>
-  <g class="route active" data-c="grottes">
-    <path class="halo" d="M566,262 C604,322 598,394 556,438 C520,478 470,602 410,611 C384,615 360,597 350,567 C334,549 306,529 301,513" stroke="var(--map-halo)" stroke-width="7"/>
-    <path class="ln" d="M566,262 C604,322 598,394 556,438 C520,478 470,602 410,611 C384,615 360,597 350,567 C334,549 306,529 301,513" stroke="#0b6e4f" stroke-width="3.2" stroke-dasharray="1.5 8" marker-end="url(#arw)"/>
-  </g>
-  <g class="route active" data-c="traversee">
-    <path class="halo" d="M566,262 C560,340 552,400 546,436 C556,470 560,486 560,500 C556,524 544,534 540,548 C560,562 580,568 588,576 C616,606 640,632 660,650 C712,652 764,653 812,655" stroke="var(--map-halo)" stroke-width="7"/>
-    <path class="ln" d="M566,262 C560,340 552,400 546,436 C556,470 560,486 560,500 C556,524 544,534 540,548 C560,562 580,568 588,576 C616,606 640,632 660,650 C712,652 764,653 812,655" stroke="#b8860b" stroke-width="3.2" stroke-dasharray="1.5 8" marker-end="url(#arw)"/>
-  </g>
-</g>
-
-<!-- ============ SPOTS ============ -->
-<g id="spots">
-  <!-- villages -->
-  <use href="#ic-village" transform="translate(470,360)"/>
-  <use href="#ic-village" transform="translate(330,355)"/>
-  <use href="#ic-village" transform="translate(660,650)"/>
-  <!-- fort Tour Fondue -->
-  <g transform="translate(540,430)"><path d="M-8 6 v-11 h3 v4 h3 v-4 h3 v4 h3 v-4 h3 v11 z" fill="var(--map-shade)" stroke="var(--map-ink)" stroke-width="1.1"/></g>
-  <!-- phare Grand Ribaud -->
-  <g transform="translate(602,588)"><path d="M-3 6 l1.5 -13 h3 l1.5 13 z" fill="#e7d7b2" stroke="var(--map-ink)" stroke-width="1"/><rect x="-2.5" y="-9" width="5" height="2.4" fill="var(--map-red)"/><circle cx="0" cy="-8" r="1.4" fill="var(--map-gold-l)"/></g>
-  <!-- caves -->
-  <use href="#ic-cave" transform="translate(505,400) scale(0.85)"/>
-  <use href="#ic-cave" transform="translate(315,401) scale(0.85)"/>
-  <use href="#ic-cave" transform="translate(330,560) scale(0.85)"/>
-  <!-- rochers -->
-  <use href="#ic-rock" transform="translate(300,455) scale(0.8)"/>
-  <!-- Jeaune Garde balise -->
-  <g transform="translate(560,500)"><path d="M0 6 v-11" stroke="var(--map-ink)" stroke-width="1.4"/><path d="M0 -11 l6 3 l-6 3 z" fill="var(--map-red)"/><use href="#ic-rock" transform="translate(0,7) scale(0.55)"/></g>
-  <!-- caps -->
-  <use href="#ic-cap" transform="translate(300,510) scale(0.85)"/>
-  <use href="#ic-cap" transform="translate(355,540) scale(0.8)"/>
-  <!-- palmiers / plages -->
-  <use href="#ic-palm" transform="translate(540,150)"/>
-  <use href="#ic-palm" transform="translate(568,345) scale(0.85)"/>
-  <use href="#ic-palm" transform="translate(400,600) scale(0.85)"/>
-  <use href="#ic-palm" transform="translate(735,648) scale(0.9)"/>
-  <use href="#ic-palm" transform="translate(815,655) scale(0.9)"/>
-  <!-- dots -->
-  <use href="#ic-dot" transform="translate(578,300)"/>
-  <use href="#ic-dot" transform="translate(540,548)"/>
-
-  <!-- ====== LES 2 X (hot) ====== -->
-  <!-- DEPART Badine (560,250) -->
-  <g class="map-decor" transform="translate(560,250)"><g stroke="var(--map-gold)" stroke-width="1.4" opacity="0.9"><path d="M0 -26 v6 M0 26 v-6 M-26 0 h6 M26 0 h-6 M-18 -18 l4 4 M18 -18 l-4 4 M-18 18 l4 -4 M18 18 l-4 -4"/></g></g>
-  <g transform="translate(560,250)"><circle r="17" fill="none" stroke="var(--map-red)" stroke-width="1.4" stroke-dasharray="3 3"/><path d="M-10 -10 L10 10 M10 -10 L-10 10" stroke="var(--map-red)" stroke-width="5" stroke-linecap="round"/></g>
-  <!-- TRESOR Escampo (365,580) -->
-  <g class="map-decor" transform="translate(365,580)"><g stroke="var(--map-gold)" stroke-width="1.3" opacity="0.9"><path d="M0 -22 v5 M0 22 v-5 M-22 0 h5 M22 0 h-5 M-15 -15 l3.5 3.5 M15 -15 l-3.5 3.5 M-15 15 l3.5 -3.5 M15 15 l-3.5 -3.5"/></g></g>
-  <g transform="translate(365,580)"><circle r="15" fill="none" stroke="var(--map-red)" stroke-width="1.3" stroke-dasharray="3 3"/><path d="M-9 -9 L9 9 M9 -9 L-9 9" stroke="var(--map-red)" stroke-width="4.5" stroke-linecap="round"/></g>
-
-  <!-- ====== LABELS ====== -->
-  <text class="spot-hot spot-label" x="560" y="234" text-anchor="middle" font-size="15">La Badine — DÉPART</text>
-  <text class="spot-hot spot-label" x="386" y="586" text-anchor="end" font-size="15">Escampo-Barriou · TRÉSOR</text>
-  <text class="spot-label" x="551" y="140" text-anchor="middle" font-size="12.5">La Capte</text>
-  <text class="spot-label" x="590" y="303" text-anchor="start" font-size="12">Pointe de la Badine</text>
-  <text class="spot-label" x="582" y="343" text-anchor="start" font-size="12">La Bergerie</text>
-  <text class="spot-label" x="456" y="366" text-anchor="end" font-size="12.5">Giens</text>
-  <text class="spot-label" x="492" y="398" text-anchor="end" font-size="12">Port du Niel</text>
-  <text class="spot-label" x="556" y="428" text-anchor="start" font-size="13">Tour Fondue</text>
-  <text class="spot-label" x="316" y="352" text-anchor="end" font-size="12.5">La Madrague</text>
-  <text class="spot-label" x="300" y="398" text-anchor="end" font-size="12">Four à Chaux</text>
-  <text class="spot-label" x="285" y="456" text-anchor="end" font-size="12">Les Fourmigues</text>
-  <text class="spot-label" x="286" y="512" text-anchor="end" font-size="12">Pointe des Chevaliers</text>
-  <text class="spot-label" x="372" y="536" text-anchor="end" font-size="12">Pointe des Salis</text>
-  <text class="spot-label" x="316" y="562" text-anchor="end" font-size="12">Calanque du Blé</text>
-  <text class="spot-label" x="418" y="604" text-anchor="start" font-size="12">La Darboussière</text>
-  <text class="spot-label" x="575" y="498" text-anchor="start" font-size="12">Jeaune Garde</text>
-  <text class="spot-label" x="527" y="546" text-anchor="end" font-size="12">Petit Ribaud</text>
-  <text class="spot-label" x="616" y="590" text-anchor="start" font-size="12.5">Grand Ribaud <tspan class="map-amb" font-size="10.5">(phare)</tspan></text>
-  <text class="spot-label" x="748" y="646" text-anchor="start" font-size="12">La Courtade</text>
-  <text class="spot-label" x="828" y="653" text-anchor="start" font-size="12">Notre-Dame</text>
-</g>
-
-<text x="700" y="676" text-anchor="middle" class="card-t spot-label" font-size="24" opacity="0.95">Porquerolles</text>
-
-<!-- ============ DECOR / MARGINALIA ============ -->
-<g class="map-decor">
-  <!-- rose des vents -->
-  <g transform="translate(830,150)">
-    <circle r="72" fill="none" stroke="var(--map-ink)" stroke-width="1.2"/>
-    <circle r="63" fill="none" stroke="var(--map-ink)" stroke-width="5" stroke-dasharray="1 12.36"/>
-    <circle r="55" fill="none" stroke="var(--map-ink)" stroke-width="0.7" opacity="0.7"/>
-    <g stroke="var(--map-ink)" stroke-width="0.8">
-      <path d="M0 -60 L9 0 L0 60 L-9 0 Z" fill="url(#goldg)"/>
-      <path d="M-60 0 L0 -9 L60 0 L0 9 Z" fill="var(--map-gold)"/>
-      <path d="M42 -42 L6 -6 L-42 42 L-6 6 Z" fill="var(--map-ink)" opacity="0.85"/>
-      <path d="M-42 -42 L-6 -6 L42 42 L6 6 Z" fill="var(--map-ink)" opacity="0.85"/>
-    </g>
-    <path d="M0 -60 L5 -12 L0 0 L-5 -12 Z" fill="var(--map-red)"/>
-    <path d="M0 -60 q-4 -6 0 -12 q4 6 0 12 Z" fill="var(--map-gold-l)" stroke="var(--map-ink)" stroke-width="0.5"/>
-    <circle r="4.5" fill="url(#goldg)" stroke="var(--map-ink)" stroke-width="0.6"/>
-    <text x="0" y="-64" text-anchor="middle" font-size="13" class="card-t" fill="var(--map-red)">N</text>
-    <text x="0" y="76" text-anchor="middle" font-size="10" class="map-amb">S</text>
-    <text x="66" y="4" text-anchor="middle" font-size="10" class="map-amb">E</text>
-    <text x="-66" y="4" text-anchor="middle" font-size="10" class="map-amb">O</text>
-  </g>
-
-  <!-- trois-mats -->
-  <g transform="translate(150,185)" stroke="var(--map-ink)" stroke-width="1.4">
-    <path d="M-30 12 Q0 30 30 12 L23 24 Q0 34 -23 24 Z" fill="var(--map-shade)"/>
-    <line x1="-12" y1="12" x2="-12" y2="-20"/><line x1="0" y1="14" x2="0" y2="-30"/><line x1="14" y1="12" x2="14" y2="-16"/>
-    <path d="M0 -28 Q16 -22 15 0 L0 0 Z" fill="url(#sailg)"/><path d="M0 -28 Q-16 -22 -15 0 L0 0 Z" fill="url(#sailg)"/>
-    <path d="M-12 -18 Q-2 -14 -3 0 L-12 0 Z" fill="url(#sailg)"/><path d="M14 -14 Q22 -10 21 2 L14 2 Z" fill="url(#sailg)"/>
-    <path d="M0 -30 l9 3 l-9 3 z" fill="var(--map-red)" stroke="none"/>
-    <path d="M34 20 q10 -3 18 2" fill="none" stroke-width="1" stroke-dasharray="1 4" opacity="0.7"/>
-  </g>
-
-  <!-- kraken + mention -->
-  <g transform="translate(175,600)" stroke="var(--map-ink)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.72">
-    <path d="M0 38 Q-18 8 6 -8 Q24 -20 12 -36"/><path d="M20 44 Q12 12 34 4 Q50 -4 42 -22"/>
-    <path d="M-16 40 Q-34 20 -20 0"/><path d="M36 40 Q54 26 44 6"/>
-    <g stroke-width="1"><path d="M2 -4 l0 3 M9 -6 l0 3 M28 6 l0 3 M36 2 l0 3"/></g>
-  </g>
-  <text x="150" y="662" text-anchor="middle" class="map-amb" font-size="14">« Ici l'eau est turquoise… »</text>
-
-  <!-- serpent de mer -->
-  <g transform="translate(890,430)" stroke="var(--map-ink)" stroke-width="1.6" fill="none" opacity="0.55" stroke-linecap="round">
-    <path d="M-30 0 q10 -12 20 0 q10 12 20 0 q10 -12 20 0"/><path d="M30 0 q6 -3 9 -8 M-30 0 q-4 4 -9 4"/>
-  </g>
-
-  <!-- echelle lieues -->
-  <g transform="translate(96,690)">
-    <text x="0" y="-8" class="map-amb" font-size="10">Lieues marines <tspan font-size="8">(indicatif)</tspan></text>
-    <g stroke="var(--map-ink)" stroke-width="1"><rect x="0" y="0" width="18" height="5" fill="var(--map-ink)"/><rect x="18" y="0" width="18" height="5" fill="none"/><rect x="36" y="0" width="18" height="5" fill="var(--map-ink)"/><rect x="54" y="0" width="18" height="5" fill="none"/></g>
-  </g>
-
-  <!-- culs-de-lampe : ancre + barre a roue -->
-  <g transform="translate(690,300)" stroke="var(--map-ink)" stroke-width="1.4" fill="none" opacity="0.5" stroke-linecap="round">
-    <circle cx="0" cy="-10" r="3"/><line x1="0" y1="-7" x2="0" y2="10"/><path d="M-8 3 Q0 14 8 3"/><line x1="-6" y1="-2" x2="6" y2="-2"/>
-  </g>
-
-  <!-- cartouche a volutes -->
-  <g transform="translate(215,655)">
-    <path d="M-150 -26 q-22 0 -22 12 q0 -8 -10 -8 q10 4 10 14 q0 10 -10 14 q10 0 10 -8 q0 12 22 12 h300 q22 0 22 -12 q0 8 10 8 q-10 -4 -10 -14 q0 -10 10 -14 q-10 0 -10 8 q0 -12 -22 -12 z" fill="#efe2c2" stroke="var(--map-ink)" stroke-width="1.6"/>
-    <rect x="-150" y="-22" width="300" height="44" fill="none" stroke="var(--map-gold)" stroke-width="1" opacity="0.8"/>
-    <text x="0" y="-2" text-anchor="middle" class="card-t" font-size="26" fill="var(--map-red)">Les Caps de Giens</text>
-    <text x="0" y="16" text-anchor="middle" class="map-amb" font-size="11">Circuits kayak &amp; paddle — départ plage de la Badine</text>
-  </g>
-
-  <!-- vignette + brulures -->
-  <rect x="0" y="0" width="1000" height="720" fill="url(#vig)" style="mix-blend-mode:multiply"/>
-  <g fill="#4a3010" opacity="0.22" filter="url(#soft)" style="mix-blend-mode:multiply"><path d="M-20 -20 q120 40 60 120 q-80 -20 -80 -120 z"/><path d="M1020 -20 q-120 40 -60 120 q80 -20 80 -120 z"/><path d="M-20 740 q120 -40 60 -120 q-80 20 -80 120 z"/><path d="M1020 740 q-120 -40 -60 -120 q80 20 80 120 z"/></g>
-  <!-- grain -->
-  <rect x="0" y="0" width="1000" height="720" filter="url(#grain)" opacity="0.28" style="mix-blend-mode:multiply"/>
-
-  <!-- cadre interieur double filet + fleurons -->
-  <rect x="9" y="9" width="982" height="702" fill="none" stroke="var(--map-ink)" stroke-width="2.4"/>
-  <rect x="15" y="15" width="970" height="690" fill="none" stroke="var(--map-gold)" stroke-width="1"/>
-  <g fill="var(--map-gold)" opacity="0.9"><path d="M15 15 q14 2 20 -6 q-2 14 6 20 q-14 -2 -20 6 q2 -14 -6 -20z"/><path d="M985 15 q-14 2 -20 -6 q2 14 -6 20 q14 -2 20 6 q-2 -14 6 -20z"/><path d="M15 705 q14 -2 20 6 q-2 -14 6 -20 q-14 2 -20 -6 q2 14 -6 20z"/><path d="M985 705 q-14 -2 -20 6 q2 -14 -6 -20 q14 2 20 -6 q-2 14 6 20z"/></g>
-</g>
-</svg>
+        <img src="img/carte.jpg" alt="Carte des balades kayak et paddle au départ de la Madrague, presqu'île de Giens : temps de pagaie, calanques, grottes, îles du Ribaud" width="1800" height="1214" loading="lazy">
       </div>
-
-      <div class="legend" id="legend">
-        <div class="leg-btn on" data-c="flamants"><span class="dot" style="background:#c64b7a"></span><span>Le Sentier des Flamants Roses<span class="meta"> · famille · 1 h</span></span></div>
-        <div class="leg-btn on" data-c="contrebandiers"><span class="dot" style="background:#1f7a8c"></span><span>La Passe des Contrebandiers<span class="meta"> · facile · 2 h</span></span></div>
-        <div class="leg-btn on" data-c="grottes"><span class="dot" style="background:#0b6e4f"></span><span>Les Grottes du Diable<span class="meta"> · moyen · demi-journée</span></span></div>
-        <div class="leg-btn on" data-c="traversee"><span class="dot" style="background:#b8860b"></span><span>La Traversée de l'Île d'Or<span class="meta"> · confirmé · journée</span></span></div>
+      <p class="map-cap">Notre carte des balades, dessinée à la main. Chaque médaillon or donne le temps de pagaie jusqu'au spot, au départ de la Madrague.</p>
+      <div class="map-read">
+        <div class="it"><span class="mk-d"></span> Temps de pagaie jusqu'au spot</div>
+        <div class="it"><span class="mk-x"></span> Le départ — la Madrague</div>
+        <div class="it"><span class="mk-p">&#9873;</span> Consignes de navigation (ports, bande des 300 m)</div>
       </div>
-      <p class="map-hint">Touchez un circuit pour l'isoler sur la carte — touchez-le à nouveau pour tout réafficher.</p>
     </div>
   </div>
 </section>
@@ -509,31 +321,31 @@ svg.dimmed .route.active .ln{stroke-width:6}
   <div class="wrap">
     <div class="eyebrow">Quatre caps, un départ</div>
     <h1 class="h2">Les parcours</h1>
-    <p class="lead">Départ plage de la Badine, retour au même quai. On vous briefe, on vous équipe, on vous confie la carte.</p>
+    <p class="lead">Départ de la base de la Madrague, retour au même quai. On vous briefe, on vous équipe, on vous confie la carte.</p>
     <div class="rule"></div>
     <div class="parcours">
       <div class="pc">
         <span class="tag" style="background:#c64b7a">Famille · 1 h</span>
         <h3>Le Sentier des Flamants Roses</h3>
-        <p class="route-txt">Badine → tombolo est → Salins des Pesquiers → La Capte</p>
+        <p class="route-txt">Madrague → tombolo → Salins des Pesquiers → La Capte</p>
         <div class="chips"><span class="chip"><b>Flamants roses</b> (selon saison)</span><span class="chip">Eaux calmes</span><span class="chip">Débutants &amp; enfants</span></div>
       </div>
       <div class="pc">
         <span class="tag" style="background:#1f7a8c">Facile · 2 h</span>
         <h3>La Passe des Contrebandiers</h3>
-        <p class="route-txt">Badine → Port du Niel → Tour Fondue → retour</p>
+        <p class="route-txt">Madrague → Port du Niel → Tour Fondue → retour</p>
         <div class="chips"><span class="chip"><b>Le fort</b> de la Tour Fondue</span><span class="chip">Crique du Niel</span><span class="chip">Cabotage abrité</span></div>
       </div>
       <div class="pc">
         <span class="tag" style="background:#0b6e4f">Moyen · demi-journée</span>
         <h3>Les Grottes du Diable de Giens</h3>
-        <p class="route-txt">Badine → pointe des Chevaliers → grottes → Escampo-Barriou</p>
+        <p class="route-txt">Madrague → pointe des Chevaliers → grottes → Escampo-Barriou</p>
         <div class="chips"><span class="chip"><b>Grottes marines</b></span><span class="chip">Calanques sauvages</span><span class="chip">Par mer calme</span></div>
       </div>
       <div class="pc">
         <span class="tag" style="background:#b8860b">Confirmé · journée</span>
         <h3>La Traversée de l'Île d'Or</h3>
-        <p class="route-txt">Badine → Tour Fondue → les Ribaud → Porquerolles (Notre-Dame)</p>
+        <p class="route-txt">Madrague → Tour Fondue → les Ribaud → Porquerolles (Notre-Dame)</p>
         <div class="chips"><span class="chip"><b>La grande passe</b></span><span class="chip">Plage Notre-Dame</span><span class="chip">Accompagné d'un guide</span></div>
       </div>
     </div>
@@ -554,6 +366,7 @@ svg.dimmed .route.active .ln{stroke-width:6}
       <div class="fl"><div class="ic">🏄</div><h4>Stand-up paddle</h4><p>Debout sur l'eau, l'horizon pour vous seul.</p></div>
       <div class="fl"><div class="ic">🐙</div><h4>Paddle géant</h4><p>Jusqu'à 6 à bord — le fou rire garanti.</p></div>
       <div class="fl"><div class="ic">⚡</div><h4>Trottinette élec.</h4><p>Pour filer sur l'eau sans forcer.</p></div>
+      <div class="fl"><div class="ic">🎉</div><h4>EVJF · EVG · séminaires</h4><p>Groupes, équipes & enterrements de vie — sur mesure.</p></div>
     </div>
 
     <div class="tarifs">
@@ -576,9 +389,28 @@ svg.dimmed .route.active .ln{stroke-width:6}
     <div class="avis">
       <div class="av"><p class="q">« Accueil au top, on nous a tout expliqué et conseillé le bon coin selon le vent. Le matériel est nickel. »</p><p class="m">— un équipage de passage</p></div>
       <div class="av"><p class="q">« Les grottes en kayak, l'eau transparente… un souvenir énorme. Le patron connaît chaque recoin. »</p><p class="m">— une sortie en famille</p></div>
-      <div class="av"><p class="q">« Simple, sympa, pas cher, et des paysages incroyables au départ de la Badine. On reviendra. »</p><p class="m">— un couple de vacanciers</p></div>
+      <div class="av"><p class="q">« Simple, sympa, pas cher, et des paysages incroyables au départ de la Madrague. On reviendra. »</p><p class="m">— un couple de vacanciers</p></div>
     </div>
     <p class="avis-note">Extraits représentatifs de la réputation de la maison. Sur le site final, vos <b>vrais avis Google</b> s'afficheront en direct, à jour.</p>
+  </div>
+</section>
+
+<!-- ============ GALERIE PHOTOS ============ -->
+<section id="gal">
+  <div class="wrap">
+    <div class="eyebrow">L'eau, la lumière, le grand bleu</div>
+    <h1 class="h2">En images</h1>
+    <p class="lead">Ce qui vous attend au bout de la pagaie : criques turquoise, calanques et le large de la presqu'île.</p>
+    <div class="rule"></div>
+    <div class="gal">
+      <figure><img src="img/real-terrasse.jpg" alt="La terrasse de la base nautique de la Madrague : requin déco, casiers de matériel et la rade de Giens en fond" loading="lazy"><figcaption>La terrasse, face à la rade de la Madrague</figcaption></figure>
+      <figure class="pos-top"><img src="img/real-pavillon.jpg" alt="Le pavillon Kayak Giens Paddle : tête de mort et pagaies croisées peintes sur une pale" loading="lazy"><figcaption>Notre pavillon — tête de mort &amp; pagaies croisées</figcaption></figure>
+      <figure><img src="img/real-requin.jpg" alt="Vue sur le mouillage de la Madrague depuis la base, avec bateaux et voiliers" loading="lazy"><figcaption>Le mouillage, à portée de pagaie</figcaption></figure>
+      <figure class="pos-top"><img src="img/real-comptoir.jpg" alt="Le comptoir de location : combinaisons, masques et pagaies prêts à partir" loading="lazy"><figcaption>Le comptoir — masques, combis &amp; pagaies</figcaption></figure>
+      <figure><img src="img/real-casiers.jpg" alt="Casiers de matériel et paddles sous la treille de la base de la Madrague" loading="lazy"><figcaption>Tout le matériel, prêt à l'eau</figcaption></figure>
+      <figure class="pos-top"><img src="img/real-pagaies.jpg" alt="Pagaies croisées et vue sur la baie de Giens" loading="lazy"><figcaption>Pagaies croisées sur la baie</figcaption></figure>
+    </div>
+    <p class="gal-note"><b>Vos propres photos</b> de la base et des sorties — c'est votre maison, votre ambiance, elle est déjà là.</p>
   </div>
 </section>
 
@@ -607,7 +439,7 @@ svg.dimmed .route.active .ln{stroke-width:6}
           <select name="duree"><option>1 heure</option><option>Demi-journée</option><option>Journée</option><option>Randonnée accompagnée</option></select>
         </div>
         <div class="full"><label>Circuit souhaité (optionnel)</label>
-          <select name="circ"><option>Je choisirai sur place</option><option>La Ronde du Ribaud</option><option>Le Secret des Grottes</option><option>Cap sur Porquerolles</option><option>Balade des Moussaillons</option></select>
+          <select name="circ"><option>Je choisirai sur place</option><option>Le Sentier des Flamants Roses</option><option>La Passe des Contrebandiers</option><option>Les Grottes du Diable</option><option>La Traversée de l'Île d'Or</option></select>
         </div>
         <div><label>Prénom</label><input type="text" name="nom" placeholder="Votre prénom"></div>
         <div><label>Téléphone</label><input type="tel" name="tel" placeholder="06 …"></div>
@@ -625,48 +457,21 @@ svg.dimmed .route.active .ln{stroke-width:6}
     <div class="eyebrow">Cap sur le quai</div>
     <h1 class="h2">Nous trouver</h1>
     <div class="infos">
-      <div class="info"><h4>Le départ</h4><p>Plage de la Badine<br>Bd Alsace-Lorraine<br>83400 Giens · Hyères</p></div>
-      <div class="info"><h4>Appareiller</h4><p><a href="tel:+33682660339">06 82 66 03 39</a><br>Réservation conseillée<br>en haute saison</p></div>
+      <div class="info"><h4>Le départ</h4><p>Base nautique de la Madrague<br>2683 route de la Madrague<br>83400 Giens · Hyères</p></div>
+      <div class="info"><h4>Appareiller</h4><p><a href="tel:+33682660339">06 82 66 03 39</a><br>Espèces &amp; carte bancaire<br>Réservation conseillée en été</p></div>
       <div class="info"><h4>Les horaires</h4><p>7j/7 · mai → septembre<br>9h – 18h<br>9h – 19h en juillet-août</p></div>
-      <div class="info"><h4>À bord</h4><p>Accueil FR / EN<br>Gilets fournis<br>Instagram @kayakgiens</p></div>
+      <div class="info"><h4>À bord</h4><p>Accueil FR / EN · gilets fournis<br>Animaux admis<br>Insta @kayakgiens · Facebook Kayak Giens</p></div>
     </div>
   </div>
 </section>
 
 <footer class="foot">
+  <svg class="foot-mk" viewBox="0 0 48 48" aria-hidden="true"><use href="#jolly"/></svg>
   <div class="ev">« On vous ouvre la carte — vous n'avez qu'à pagayer. »</div>
-  <p>Kayak Giens Paddle · Presqu'île de Giens · Hyères (83)</p>
+  <p>Kayak Giens Paddle · Base de la Madrague · Presqu'île de Giens · Hyères (83)</p>
   <p style="margin-top:8px;opacity:.7">Maquette de présentation réalisée par Everywhere · contenu &amp; visuels à valider avec la maison</p>
 </footer>
 
-<script>
-(function(){
-  var svg=document.getElementById('tmap');
-  var routes=Array.prototype.slice.call(svg.querySelectorAll('.route'));
-  var btns=Array.prototype.slice.call(document.querySelectorAll('#legend .leg-btn'));
-  var active=null; // null = all shown
-
-  function apply(){
-    if(active===null){
-      svg.classList.remove('dimmed');
-      routes.forEach(function(r){r.classList.add('active');});
-      btns.forEach(function(b){b.classList.add('on');});
-    }else{
-      svg.classList.add('dimmed');
-      routes.forEach(function(r){r.classList.toggle('active', r.getAttribute('data-c')===active);});
-      btns.forEach(function(b){b.classList.toggle('on', b.getAttribute('data-c')===active);});
-    }
-  }
-  btns.forEach(function(b){
-    b.addEventListener('click',function(){
-      var c=b.getAttribute('data-c');
-      active = (active===c) ? null : c;
-      apply();
-    });
-  });
-  apply();
-})();
-</script>
 <a href="sobre/" style="position:fixed;left:14px;bottom:14px;z-index:9999;background:rgba(16,12,6,.92);color:#e8c876;border:1px solid rgba(232,200,118,.5);border-radius:999px;padding:9px 16px;font:600 12.5px/1 sans-serif;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.35)">◇ Version sobre</a>
 </body>
 </html>
